@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LOQUOR — Запах на одежде</title>
+	<style>
+		:root {
+			font-size: 16px;
+		}
+
+		* {
+			box-sizing: border-box;
+			font-family: Inter, sans-serif;
+		}
+
+		.background {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+
+		.background::before {
+			content: '';
+			display: block;
+			position: relative;
+			background: url(media/loquor-zapah-na-odezhde.jpg) no-repeat center center;
+			background-size: cover;
+			filter: blur(10px);
+			transform: scale(1.25);
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.background::after {
+			background: rgba(0,0,0,.75);
+			content: '';
+			position: absolute;
+			top: 0;
+			display: block;
+			bottom: 0;
+			width: 100%;
+			z-index: 9;
+		}
+
+		body {
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			padding: 2rem;
+		}
+
+		h1, h2 {
+			margin: 0 0 0 0;
+		}
+
+		h1 {
+			font-weight: 500;
+			font-size: 1.25rem;
+		}
+
+		h2 {
+			margin: .25rem 0;
+			font-size: .85rem;
+			font-weight: 400;
+		}
+
+		hr {
+			margin: 0;
+		}
+
+		.card {
+			background-color: #fefefe;
+			border-radius: .5rem;
+			overflow: hidden;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+			max-width: 320px;
+			width: 100%;
+		}
+
+		.card__cover {
+			width: 100%;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.card__header {
+			text-align: center;
+			padding: .5rem 1rem;
+		}
+
+		.card__body {
+			padding: 1rem;
+		}
+
+		.card__service {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.card__service:not(:last-of-type) {
+			padding-bottom: 1rem;
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
+			margin-bottom: 1rem;
+		}
+
+		.card__service__icon {
+			width: 15%;
+			margin-right: 1rem;
+		}
+
+		.card__service__name {
+			flex-grow: 1;
+			margin-right: 1rem;
+		}
+
+		hr {
+			opacity: .2;
+			border: 0;
+			height: 1px;
+			background: #000;
+		}
+
+		.hr-sm {
+			opacity: .1;
+		}
+
+		.btn {
+			/*width: 25%; */
+			color: #000;
+			background: #eee;
+			text-decoration: none;
+			text-align: center;
+			font-weight: 500;
+			padding: 0 1rem;
+			border-radius: 5px;
+			line-height: 2.5rem;
+			height: 2.5rem;
+		}
+
+		.btn-instagram {
+			color: #fff;
+			background: linear-gradient(90deg, #ED0016, #BE00A6);
+		}
+
+		.btn-boom {
+			color: #fff;
+			background: linear-gradient(45deg, #ff2e8e, #ff271d);
+		}
+
+		.btn-vk {
+			color: #fff;
+			background: #4680C2;
+		}
+
+		.btn-apple {
+			color: #fff;
+			background: linear-gradient(-45deg, #fa57c1, #7572ff);
+		}
+
+		.btn-spotify {
+			color: #fff;
+			background: #1ed760;
+		}
+
+		.card__footer-text {
+			font-size: .8rem;
+			opacity: .5;
+			text-align: center;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<img class="card__cover" src="media/loquor-zapah-na-odezhde.jpg">
+		<div class="card__header">
+			<h1>Запах на одежде</h1>
+			<h2>LOQUOR</h2>
+		</div>
+		<hr class="hr-lg">
+		<div class="card__body">
+			<div class="card__service">
+				<img class="card__service__icon" src="media/boom.png">
+				<h2 class="card__service__name">BOOM</h2>
+				<a class="btn btn-boom" href="https://boom.ru/redirect/album/11167434">Слушать</a>
+			</div>
+			<div class="card__service">
+				<img class="card__service__icon" src="media/vk.png">
+				<h2 class="card__service__name">VK Music</h2>
+				<a class="btn btn-vk" href="https://vk.com/music/album/-2000100329_8100329_e5ff970648143ab897">Слушать</a>
+			</div>
+			<div class="card__service">
+				<img class="card__service__icon" src="media/apple.png">
+				<h2 class="card__service__name">Apple Music</h2>
+				<a class="btn btn-apple" href="https://music.apple.com/us/album/%D0%B7%D0%B0%D0%BF%D0%B0%D1%85-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B5/1523521293?i=1523521294">Слушать</a>
+			</div>
+			<div class="card__service">
+				<img class="card__service__icon" src="media/spotify.png">
+				<h2 class="card__service__name">Spotify</h2>
+				<a class="btn btn-spotify" href="https://open.spotify.com/album/2YKexU1orFXKiOgNtaDPB8?si=55WexVPQQF2OVk0IifXpiw">Слушать</a>
+			</div>
+			<div class="card__service">
+				<img class="card__service__icon" src="media/instagram.png">
+				<h2 class="card__service__name">Instagram</h2>
+				<a class="btn btn-instagram" href="https://instagram.com/iamloquor">Смотреть</a>
+			</div>
+		</div>
+	</div>
+	<div class="background"></div>
+</body>
+</html>
